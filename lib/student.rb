@@ -127,7 +127,7 @@ class Student
 
       DB[:conn].execute(sql).map do |row|
         self.new_from_db(row)
-      end.first #this is needed because there is just one row
+      end
     end
 
 end
