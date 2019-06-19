@@ -5,7 +5,7 @@ class Student
     # create a new Student object given a row from the database
     student = self.new
     student.id = row[0]
-    student.name = row]1]
+    student.name = row[1]
     student.grade = row[2]
     student #returns student object at end of creation, hard coded since this isn't the buuilt in initialize method
   end
