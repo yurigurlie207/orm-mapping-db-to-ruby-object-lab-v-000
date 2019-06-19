@@ -117,4 +117,19 @@ class Student
     end.first #this is needed because there is just one row
   end
 
+
+    def self.all_students_in_grade_X
+      sql = <<-SQL
+        SELECT *
+        FROM students
+        WHERE grade = 10
+        ORDER BY students.id
+        LIMIT 1
+      SQL
+
+      DB[:conn].execute(sql).map do |row|
+        self.new_from_db(row)
+      end.first #this is needed because there is just one row
+    end
+
 end
