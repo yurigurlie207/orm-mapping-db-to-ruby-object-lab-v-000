@@ -17,8 +17,8 @@ class Student
       SELECT *
       FROM students
     SQL
-    #returns an array of arrays
 
+    #returns an array of arrays, row is an array
     DB[:conn].execute(sql).map do |row|
      self.new_from_db(row)
    end
