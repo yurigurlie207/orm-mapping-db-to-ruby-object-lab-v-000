@@ -17,6 +17,7 @@ class Student
       SELECT *
       FROM students
     SQL
+    #returns an array of arrays
 
     DB[:conn].execute(sql).map do |row|
      self.new_from_db(row)
